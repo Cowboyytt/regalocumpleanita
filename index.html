@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Inicio -->
+    <section id="inicio" class="fullscreen">
+        <h1>Feliz Cumpleaños</h1>
+        <div class="gif-contenedor">
+            <img src="8494e8b4442b21fd5258bf22ede72cde.gif" alt="GIF de cumpleaños" id="gif-inicio">
+        </div>
+    <div class="botones-inicio">
+    <button onclick="mostrarContenido()">
+        <img src="icono-leer.png" alt="Icono" class="icono-boton"> Leer más
+    </button>
+</div>
+    </section>
+
+    <!-- Contenido principal -->
+    <div id="contenido-borroso" class="contenido-oculto">
+        <!-- Para el Amor de Mi Vida -->
+        <section id="mensaje-inicial">
+            <h2>Para el Amor de Mi Vida</h2>
+            <p>Eres la luz que ilumina mis días, te amo con todo mi corazón Anita, eres la niña más preciosa que he conocido. Te adoro.</p>
+            <div class="imagen-contenedor">
+                <img src="imagen1.jpg" alt="Espacio para tu imagen" id="imagen">
+            </div>
+          <div class="botones-inicio">
+    <button onclick="seguirContenido()">
+        <img src="seguiirr.png" alt="Icono" class="icono-boton"> Seguir
+    </button>
+</div>
+        </section>
+
+        <!-- Video de YouTube -->
+        <section id="video" class="contenido-oculto">
+            <div class="video-contenedor">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q0yFXO5ZNKw?si=0cjwOMIqkvGRBZN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Texto romántico -->
+        <section id="mensaje-romantico" class="contenido-oculto">
+            <h2>Para mi niña de ojitos lindos</h2>
+            <blockquote>
+                <p>“Tus ojos, café con miel, son dos estrellas que iluminan mis noches.”</p>
+            </blockquote>
+            <div class="imagen-contenedor">
+                <img src="fc8596a2525cd78f84afc05336bac797.jpg" alt="Espacio para imagen" id="imagen-romantico">
+            </div>
+        </section>
+
+        <!-- Canciones -->
+        <section id="canciones" class="contenido-oculto">
+            <h2>Nuestras Canciones</h2>
+            <div class="cancion">
+                <audio controls>
+                    <source src="BONITA_MON.mp3" type="audio/mp3">
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+                <img src="4e33820a33951d28aa7d703cfc25f18f.png" alt="Icono decorativo">
+            </div>
+            <div class="cancion">
+                <audio controls>
+                    <source src="Platicame De Ti.mp3" type="audio/mp3">
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+                <img src="sadkasd.png" alt="Icono decorativo">
+            </div>
+        </section>
+
+        <!-- Videos Especiales -->
+        <section id="videos-adicionales" class="contenido-oculto">
+            <h2>Videos Especiales</h2>
+            <div class="video-adicional">
+                <video controls>
+                    <source src="makesweet-o2qzfn.mp4" type="video/mp4">
+                    Tu navegador no soporta el reproductor de video.
+                </video>
+            </div>
+            <div class="video-adicional">
+                <video controls>
+                    <source src="ILY.mp4" type="video/mp4">
+                    Tu navegador no soporta el reproductor de video.
+                </video>
+            </div>
+        </section>
+
+        <!-- Mensaje final -->
+        <section id="mensaje-cumpleaños" class="contenido-oculto">
+            <h2>Feliz Cumpleaños, Mi Anita Hermosa</h2>
+            <p>
+                Mi amor, hoy celebramos tu día especial. Desde que te conocí, cada momento contigo ha sido increíble.
+                Eres tan hermosa como un paisaje en otoño y tan cálida como un rayito de sol. Te amo con todo mi ser
+                y espero que este cumpleaños sea solo el inicio de muchos más que pasaremos juntos.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Página creada con amorcito por Rodri</p>
+        </footer>
+    </div>
+
+    <script>
+        function mostrarContenido() {
+            const contenido = document.getElementById('contenido-borroso');
+            contenido.classList.remove('contenido-oculto');
+            contenido.style.animation = 'fade-in 1.5s forwards';
+            document.getElementById('inicio').style.display = 'none';
+        }
+
+        function seguirContenido() {
+            // Muestra las siguientes secciones con animación
+            const secciones = document.querySelectorAll('.contenido-oculto');
+            secciones.forEach(function (seccion) {
+                seccion.classList.remove('contenido-oculto');
+                seccion.style.animation = 'fade-in 1.5s forwards';
+            });
+        }
+    </script>
+</body>
+</html>
